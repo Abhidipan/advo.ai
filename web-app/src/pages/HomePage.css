@@ -1,0 +1,699 @@
+/* src/pages/HomePage.css */
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+  body {
+    font-family: 'Poppins';
+}
+.home-page {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* Left Sidebar Styles */
+  .left-sidebar {
+    width: 15%;
+    height: 100vh;
+    background-color: #333;
+    color: white;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Left Side Navbar Styles */
+  .left-side-navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #F4DFC8;
+    align-items: center;
+    border-right: #000000 solid 1px;
+
+  }
+  .advocate{
+    text-align: center;
+  }
+    .advocate img{
+      margin-top: 17px;
+        width: 60px;
+        height: 60px;
+        -webkit-filter: invert();
+    }
+.advocate h1{
+    font-size: 20px;
+    color: white;
+}
+  
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;}
+
+    .buttons img{
+        width: 30px;
+        height: 30px;
+        background: none;
+    }
+  .buttons button{
+    background: none;
+  }
+  button {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+  }
+  .buttons button:hover{
+    transform: scale(1.3);
+    transition: 0.3s;
+    background: none;
+  }
+.documents button:hover{
+  background-color: black;
+  color: white;
+  transition: 0.3s;
+  img{
+    -webkit-filter: invert(100%);
+filter: invert(100%);
+transition:0.3s;
+  }
+}
+  
+  .settings {
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .dark-mode-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* The switch - the box around the slider */
+.switch {
+  display: block;
+  --width-of-switch: 3.5em;
+  --height-of-switch: 2em;
+  /* size of sliding icon -- sun and moon */
+  --size-of-icon: 1.4em;
+  /* it is like a inline-padding of switch */
+  --slider-offset: 0.3em;
+  position: relative;
+  width: var(--width-of-switch);
+  height: var(--height-of-switch);
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f4f4f5;
+  transition: .4s;
+  border-radius: 30px;
+  border: #000 2px solid;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: var(--size-of-icon,1.4em);
+  width: var(--size-of-icon,1.4em);
+  border-radius: 20px;
+  left: var(--slider-offset,0.3em);
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(40deg,#ff0080,#ff8c00 70%);
+  ;
+ transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #303136;
+  border: #ffffff 2px solid;
+}
+
+input:checked + .slider:before {
+  left: calc(100% - (var(--size-of-icon,1.4em) + var(--slider-offset,0.3em)));
+  background: #303136;
+  /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
+  box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
+}
+  
+  /* Left Menubar Styles */
+  .left-menubar {
+    width: 20%;
+    background-color: #F4EAE0;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    border-right: #000000 solid 1px;
+  }
+  .documents{
+    text-align: center;
+    justify-content: center;
+    color: #000;
+  }
+  .documents button{
+    width: 100%;
+    border-radius: 35px;
+    border: 1px solid black;
+  }
+/* Add this CSS to your existing stylesheet */
+
+.main {
+  width: 1200px;
+  right: 0;
+  margin-right: 0%;
+  overflow: hidden;
+}
+
+.advo {
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.advo h1 {
+  font-size: 30px;
+}
+
+.advo h2 {
+  font-size: 15px;
+  font-weight: light;
+}
+
+.advo-content {
+  flex-grow: 1;
+}
+.menu2{
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+
+}
+
+.menu2 h1{
+  color: #000;
+  font-size: 27px;
+}
+
+.advo1 {
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.advo1 h1 {
+  font-size: 20px;
+  color: #000;
+}
+.advo-content1 {
+  flex-grow: 1;
+}
+
+
+/* Add this to your existing styles or create a new CSS file */
+/* .content1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.about{
+    text-align: justify;
+    color: #000;
+    margin-bottom: 80px;
+}
+.about h3{
+    text-align: center;
+    font-size: 20px;
+}
+.about p{
+    font-size: 12px;
+}
+.button-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap:nowrap;
+    justify-content: center;
+  }
+  .button-container a{
+    text-decoration: none;
+  }
+  
+  .button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #000000;
+    width: 100px;
+    border-radius: 20px;
+    background: #e0e0e0;
+    box-shadow: inset 5px 5px 10px #cacaca,
+                inset -5px -5px 10px #f6f6f6;
+  }
+  .button:hover{
+    border: 1px solid white;
+    box-shadow: none;
+    background-color: black;
+  color: white;
+  transition: 0.3s;
+  img{
+    -webkit-filter: invert(100%);
+filter: invert(100%);
+transition:0.3s;
+  }
+  }
+  
+  
+  .button img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+  }
+  
+  .button span {
+    margin-top: 10px;
+    text-align: center;
+  } */
+
+  /* Your existing CSS styles */
+
+.content1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.about {
+  text-align: justify;
+  color: #000;
+  margin-bottom: 80px;
+}
+
+.about h3 {
+  text-align: center;
+  font-size: 20px;
+}
+
+.about p {
+  font-size: 12px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Center the buttons horizontally */
+}
+
+.button-container a {
+  text-decoration: none;
+  width: 100%;
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  padding: 10px;
+  border: 1px solid #000000;
+  width: 100%; /* Set width to 100% */
+  border-radius: 20px;
+  background: #e0e0e0;
+  box-shadow: inset 5px 5px 10px #cacaca, inset -5px -5px 10px #f6f6f6;
+}
+
+.button:hover {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  transition: 0.3s;
+  img{
+    -webkit-filter: invert(100%);
+filter: invert(100%);
+transition:0.3s;
+  }
+  
+}
+
+.button img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  transition: 0.3s;
+}
+.button img:hover {
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+
+.button span {
+  margin-top: 10px;
+  text-align: center;
+}
+
+
+
+  
+  .profile{
+    color: #000;
+    align-items: center;
+    justify-content: center;
+  }
+.profile-section{
+  color: #000;
+  margin-top: 30px;
+}
+.profileBtn-container button{
+  width: 100%;
+  border-radius: 35px;
+  border: 1px solid black;
+}
+.details-section{
+  width: 190px;
+  margin: 40px 0;
+  
+}
+.details-section h3{
+  font-weight: 500;
+}
+.profile-icon-container img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.profile-icon-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profileOpt{
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.profileOpt button{
+  border-radius: 35px;
+  border: 1px solid black;
+}
+.location-section{
+  height: 170px;
+  overflow: hidden;
+  margin-bottom: 10px
+}
+
+.home-page.dark-mode {
+  background-color: #333;
+  color: white;
+}
+
+.home-page.light-mode {
+  background-color: #fff;
+  color: #000;
+}
+.button-icon{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.button-icon{
+  height: 20px;
+}
+.button-icon img{
+  justify-self:flex-end;
+}
+.profileOpt .button-icon{
+gap: 10px;
+}
+
+.profileBtn-container{
+  margin-top: 250px;
+}
+.profileBtn-container .deletebtn{
+  border: 2px solid red;
+}
+.profileBtn-container .logoutbtn{
+  border: 2px solid blue;
+}
+.profileBtn-container .deletebtn:hover{
+  background-color: red;
+  color: white;
+  transition: 0.3s;
+  img{
+    -webkit-filter: invert(100%);
+filter: invert(100%);
+transition:0.3s;
+  }
+}
+.profileBtn-container .logoutbtn:hover{
+  background-color: blue;
+  color: white;
+  transition: 0.3s;
+  img{
+    -webkit-filter: invert(100%);
+filter: invert(100%);
+transition:0.3s;
+  }
+}
+
+.profileOpt .verifybtn{
+  border:2px solid green;
+}
+.profileOpt .verifybtn:hover{
+  background-color: green;
+  color: white;
+  transition: 0.3s;
+  img{
+    -webkit-filter: invert(100%);
+filter: invert(100%);
+transition:0.3s;
+  }
+}
+.profileBtn-container .editbtn{
+  border:2px solid black;
+}
+.profileBtn-container .editbtn:hover{
+  background-color: black;
+  color: white;
+  transition: 0.3s;
+  img{
+    -webkit-filter: invert(100%);
+filter: invert(100%);
+transition:0.3s;
+  }
+}
+
+
+/* .new_main {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.row.expanded {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.section {
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+  border: 2px solid wheat;
+  transition: all 0.3s ease;
+}
+
+.section2 {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+  border: 2px solid wheat;
+  transition: all 0.3s ease;
+}
+
+.section.active {
+  grid-area: 1 / 1 / 3 / 3;
+  width: 100%;
+}
+
+.section2.active {
+  width: 0%;
+}
+
+.section h2,
+.section2 h2 {
+  color: #333;
+}
+
+.section p,
+.section2 p {
+  color: #666;
+}
+
+.new_main button {
+  border: 1px solid #000;
+  border-radius: 15px;
+}
+
+.returnButton {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+} */
+
+/* 
+.new_main {
+  overflow: hidden;
+  height: 100vh;
+  padding: 10px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.row.expanded {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.section,
+.section2 {
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+  border: 2px solid wheat;
+  transition: all 0.3s ease;
+  width: 100%; 
+}
+
+.section2 {
+  margin: auto; 
+}
+
+.section.active {
+  grid-area: 1 / 1 / 3 / 3;
+  width: 100%;
+}
+
+.section2.active {
+  width: 0;
+}
+
+.section h2,
+.section2 h2 {
+  color: #333;
+}
+
+.section p,
+.section2 p {
+  color: #666;
+}
+
+.new_main .returnButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: medium;
+  background-color: #ff0000;
+  color: #fff;
+  padding:10px;
+  padding-left: 20px;
+  cursor: pointer;
+  border-radius: 0 0 0 100px;
+} */
+
+.new_main {
+  overflow: hidden;
+  height: 100vh;
+  padding: 10px;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+  border: 2px solid wheat;
+  transition: all 0.3s ease;
+  width: 100%; /* Initially set width to 100% for non-active sections */
+}
+
+.section.active {
+  grid-row: 1 / span 2; /* Make active section span both rows */
+  grid-column: 1 / span 3; /* Make active section span all three columns */
+  width: 100%;
+  overflow: hidden; /* Set width to 100% for the active section */
+}
+
+/* Optional: Add styling for the heading, description, and button */
+.section h2 {
+  color: #333;
+}
+
+.section p {
+  color: #666;
+}
+
+.new_main .returnButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: medium;
+  background-color: #ff0000;
+  color: #fff;
+  padding: 10px;
+  padding-left: 20px;
+  cursor: pointer;
+  border-radius: 0 0 0 100px;
+}
+.new_main .sectionBtn{
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.new_main .sectionBtn:hover{
+  background-color: black;
+  color: white;
+  transition: 0.3s;
+}
